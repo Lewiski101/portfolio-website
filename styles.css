@@ -1,0 +1,541 @@
+main { 
+    width: 100%;
+    margin: auto;
+}
+
+body {
+    color: rgb(228, 220, 220);
+    background-color: rgb(3, 0, 0);
+    width: 100%;
+
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    border-radius: 4px; 
+    margin-left: -1px;
+    font-family: sans-serif;
+
+}
+
+nav ul li a:hover {
+    box-shadow: 0 5px 8px rgba(10, 139, 224, 0.856);
+}
+
+nav ul li a:active {
+    text-decoration: underline;
+    box-shadow: 0 5px 8px rgba(9, 160, 197, 0.856);
+       border-bottom: 2px solid blue; /* Optional for underlining active link */
+
+}
+
+.top {
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px; 
+    background-color: #000000;
+}
+
+.logo {
+    font-family: Impact;
+    font-size: 20px;
+    display: flex;
+    width: 100px;
+    z-index: 1000;
+    margin:0 auto;
+ }
+#logopic{
+    margin-left:1%;
+    display:flex;
+}
+.logo a {
+    text-decoration: none;
+    color: white;
+}
+.logo a:hover {
+    box-shadow: 0 10px 20px rgba(10, 198, 255, 0.856);
+    transform: scale(1.5);
+    transition-duration: 1s;
+}
+
+.fa-youtube {
+    color: white;
+    margin-left: 15px;
+}
+
+.fa-youtube:hover {
+    transform: scale(1.5);
+    box-shadow: 0 10px 20px rgba(10, 198, 255, 0.856);
+}
+
+.fa-instagram {
+    color: white;
+    margin-left: 15px;
+}
+
+.fa-instagram:hover {
+    transform: scale(1.5);
+    box-shadow: 0 10px 20px rgba(10, 198, 255, 0.856);
+}
+
+#img1 {
+    width: 100%; 
+    height:100vh;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    background-image: url('assets/images/itsLewiski.png');
+    background-size: cover; 
+    background-position: center;   
+    filter: brightness(8px);
+    box-shadow: 0 12px 30px rgba(10, 198, 255, 0.856);
+}
+
+#box {
+    margin-top: 0;
+    justify-content: right;
+    margin-left: 0px;
+    align-items: right;
+    position: absolute;
+    left: 0;
+    margin-left: 40px;
+    font-family: sans-serif;
+    text-shadow: 
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000; 
+}
+
+#box h1 {
+    font-size: 20px;
+}
+
+#box h2 {
+    font-size: 50px;
+   width:70%;
+}
+
+#button1 {
+    color: white;
+    background: rgb(10, 139, 190);
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.section1 {
+    position: relative;
+    left: -100%; /* Start off-screen */
+    transition: left 1s ease-out;
+    width: 90%;
+    box-shadow: 0 5px 20px rgba(116, 116, 116, 0.85);
+    border-radius: 10px;
+    text-align: center;
+    font-size: 20px;
+    margin: 0 auto;
+    padding: 10px;
+    line-height: 30px;
+    font-family: sans-serif;
+
+}
+
+#button2 {
+    margin: 0 auto;
+    justify-content: center;
+    font-size: 15px;
+    padding: 10px 40px;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    background: rgb(23, 168, 187);
+}
+
+#button2:hover {
+    box-shadow: 0 2px 5px #fffbfb;
+}
+
+#button1:hover {
+    box-shadow: 0 2px 5px #fffbfb;
+}
+nav {
+    height: 60px;
+    width: 100%;
+    align-items: center;
+    display: flex;
+  }
+  
+  .head li {
+    margin: 0 10px;
+  }
+  
+  .head {
+    display: flex;
+    list-style: none;
+    justify-content: flex-start;
+    text-align: justify;
+    padding: 5px;
+    gap: 20px;
+    font-family: serif;
+  }
+  
+  .menu-toggle {
+    display: none; 
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    box-shadow: 0 3px 4px rgba(255,255,255, 0.9);
+  }
+  
+  /* Responsive Styles */
+  @media screen and (max-width: 768px) {
+    nav {
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+    }
+  
+    .menu-toggle {
+      display: block; /* Show hamburger menu on small screens */
+    }
+  
+    .head {
+      display: none; /* Initially hide the menu links */
+      flex-direction: column;
+      width: 100%;
+      padding:10px;
+    }
+  
+    .head.active {
+        display: flex; 
+            position: absolute; /* Ensure it overlays the rest */
+            top: 50px; 
+            width: 100%; 
+            z-index: 1000; /* Ensure it stays on top of nav */
+            background-color: black; 
+            align-items: flex-start;
+            margin-top: 30px;
+
+    }
+  }
+  .section2{
+    right: -100%;
+    position: relative;
+    transition: right 1.5s ease-out;
+    width:80%;
+    display:flex;
+    padding:20px;
+    font-size:20px;
+    box-shadow: 0 5px 20px rgba(116, 116, 116, 0.80);
+    font-family: sans-serif;
+    line-height: 30px;
+    margin: 30px auto;
+
+}
+#img2 img{
+box-shadow: 0 10px 40px rgba(37, 155, 8, 0.5);
+border-radius: 200px;
+border: 2px solid #ffffff;
+margin: 0 auto;
+width: 370px;
+}
+
+
+#img2 img:hover{
+    transform: scale(1.1);
+    border:2px solid #2bff00;
+border-radius: 10px;
+transition-duration: 2s;
+box-shadow: 10px 10px 40px rgba(38, 133, 223, 0.5);
+    }
+
+#img2{
+    display:flex;
+    margin-top: 30px ;
+
+}
+.fa-star{
+    color:aqua;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    margin:20px auto;
+}
+#image3{
+    text-align:center;
+    justify-content:center;
+    margin:20px auto;
+}
+#image3 img{
+    width:100%;
+    height:70vh;
+}
+#blog{
+    padding:30px;
+    width:80%;
+    justify-content: center;
+    display:flex;
+    margin:0 auto;
+     box-shadow:10px 10px 20px rgba(177, 176, 176, 0.85);
+     line-height: 30px;
+     font-family: sans-serif;
+    }
+
+#blog  h2{
+   text-align:center;
+   text-decoration: underline;
+
+}
+#blog p{
+    text-align:center;
+    font-size:20px;
+    margin:10px;
+}
+#learn{
+    background-color: rgb(19, 148, 148);
+    color:white;
+    padding:20px 35px;
+    display: flex;
+    margin:30px auto;
+}
+#learn:hover{
+    box-shadow: 0 2px 5px #fffbfb;
+}
+#blogtext{
+    text-align: center;
+}
+#blog button:hover{
+    box-shadow: 0 2px 5px #fffbfb;
+}
+#contact h2{
+ text-align:center;
+ text-decoration:underline;
+}
+#contact p{
+    text-align:center;
+    font-size:20px;
+   }
+ #contact{
+padding:30px;
+width:80%;
+justify-content: center;
+display:flex;
+margin:0 auto;
+ box-shadow:10px 10px 20px rgba(177, 176, 176, 0.85);
+ line-height: 30px;
+     font-family: sans-serif;
+   }
+.fa-blog{
+    color:rgb(32, 218, 193);
+    font-size: 50px;
+    margin:0 auto;
+    display: flex;
+    justify-content: center;
+
+}
+.fa-phone{
+    color:aqua;
+    display:flex;
+    justify-content:center;
+    margin:0 auto;
+    font-size:30px;
+    margin-top: 30px;
+}
+.story{
+    padding:30px;
+width:80%;
+justify-content: center;
+display:flex;
+margin:0 auto;
+margin-top: 30px;
+    box-shadow:10px 10px 20px rgba(177, 176, 176, 0.85);
+    line-height: 30px;
+    font-family: sans-serif;
+}
+.story p{
+    text-align:center;
+    font-size:20px;
+   }
+#contain h2{
+    text-align: center;
+    margin-top: 10px;
+}
+.fa-book{
+    color:aqua;
+    display:flex;
+    justify-content:center;
+    font-size:30px;
+    margin-top: 30px;
+
+}
+#footer{
+    background-color: rgb(107, 1, 1);
+    height:250px;
+    width:100%;
+    margin-top: 25px;
+    text-align: center;
+    padding: 5px;;
+}
+
+#footer nav ul li{
+    list-style: none;
+    display: inline-block; 
+text-align: center;   
+ justify-content: center;
+    padding: 10px 20px; 
+}
+#footer nav{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    font-weight: 100;
+}
+.contactblock{
+    position: relative;
+    left: -100%; /* Start off-screen */
+    transition: left 1s ease-out;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 50px; 
+  }
+  .one{
+    margin-bottom: 30px;
+  }
+  #infocrib{
+    text-align: center;
+    justify-content: center;
+  }
+  #studytune{
+    text-align: center;
+    justify-content: center;
+    border-bottom: none;
+
+  }
+  .infocrib{
+    box-shadow: 0 2px 10px rgba(155,255,255,1.9);
+    width:80%;
+    display: flex;
+    margin:30px auto;
+    border-radius: 10px;
+
+  }
+  .section1About{
+    box-shadow: 0 2px 10px rgba(255,255,255,1.99);
+    margin:20px;
+    padding:20px;
+  font-size: 20px;
+  font-family: sans-serif;
+    line-height: 35px; 
+    width:80%;
+    margin: auto;
+
+  }
+.section1About h3{
+    font-size:30px;
+}
+  .section1Contact{
+    font-size: 20px;
+    box-shadow:10px 5px 15px rgba(177, 176, 176, 0.85);
+    padding:20px;
+    align-items: center;
+    justify-content: center;
+    width:80%;
+    margin: 0  auto;
+    font-family: sans-serif;
+    line-height: 30px;
+    
+  }
+  .section1Contact p{
+    margin: 2px auto;
+    line-height: 30px;
+
+  }
+  .section1Contact p a{
+    width: 5px;
+    font-size: 15px;
+    align-items: center;
+    justify-content: center;
+    
+  }
+
+  .section1Contact a{
+    text-decoration: none;
+  }
+  .section1Contact h3{
+font-size: 30px;  
+}
+  .section1Contact button:hover{
+   
+    box-shadow:0 5px 10px rgba(177, 176, 176, 0.85);
+
+  }
+ .section1Contact form{
+    border: 2px solid rgb(58, 58, 58);
+    box-shadow: 2px 5px 15px rgba(8, 87, 133, 0.856) ;
+    padding: 30px;
+    justify-content: center;
+    margin:20px auto;
+    border-radius:20px;
+    width: 80%;
+
+ }
+ .section1Contact input{
+display:inline-block;
+width: 80%;  
+padding: 5px;
+display:flex;
+margin-bottom:15px;
+padding-bottom: 10px;
+ }
+ .section1Contact textarea{
+    display: inline;
+    padding:10px 50px 60px 10px;
+    font-size: 17px;
+    width:65%;
+ }
+
+ #submit{
+    padding:10px 50px;
+    margin:20px auto;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(0, 153, 255);
+    color: aliceblue;
+
+ }
+ .section1Privacy{
+    padding:20px;
+    font-size: 20px;
+    font-family: sans-serif;
+    box-shadow: 2px 5px 40px rgba(8, 87, 133, 0.856) ;
+    width:80%;
+    margin: auto;
+    line-height: 30px;
+
+ }
+ .section1Privacy h3{
+    font-size: 30px;
+ }
+.section1Terms{
+    font-size: 20px;
+    font-family: sans-serif;
+    padding: 20px;
+    box-shadow: 2px 5px 40px rgba(8, 87, 133, 0.856) ;
+    line-height: 30px;
+    width:80%;
+    margin:0 auto;
+}
+.para1{
+    font-family:sans-serif; 
+    width:70%;
+    text-align:center;
+    margin:0 auto;
+    line-height: 30px;
+}
